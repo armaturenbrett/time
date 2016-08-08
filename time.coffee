@@ -28,13 +28,17 @@ class TimeWidget
   tick: ->
     referenceTime = parseInt(this.referenceDate.getTime() / 1000)
     currentTime = parseInt(this.currentDate.getTime() / 1000)
+    difference = referenceTime - currentTime
 
-    if referenceTime < currentTime
-      increment = 900
-    else if referenceTime > currentTime
-      increment = 1100
-    else
+    if Math.abs(difference) > 10
+      this.currentDate = this.referenceDate
+
+    if difference == 0
       increment = 1000
+    else if difference < 0
+      increment = 900
+    else if difference > 0
+      increment = 1100
 
     this.currentDate = new Date(this.currentDate.getTime() + increment)
     this.referenceDate = new Date(this.referenceDate.getTime() + 1000)

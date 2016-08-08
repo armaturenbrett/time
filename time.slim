@@ -1,15 +1,22 @@
 .time
   .time
+    = fa_icon('clock-o')
     span.hour
-    | {{time.hour}}
-    | :
+      | {{time.hour}}
     span.minute
-    | {{time.minute}}
-    | :
+      | {{time.minute}}
     span.second
     | {{time.second}}
   .date
-    .weekday
-    | {{date.weekday}},
-    .date
-    | {{date.day}}. {{date.month}} {{date.year}}
+    = fa_icon('calendar')
+    div
+      span.weekday
+        | {{date.weekday}}
+      br
+      span.date
+        span.day
+          | {{date.day}}
+        span.month
+          | {{date.month}}
+        span.year
+          | {{date.year}}
