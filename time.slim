@@ -1,1 +1,15 @@
 .time
+  .time
+    span.hour
+    | {{time.hour}}
+    | :
+    span.minute
+    | {{time.minute}}
+    | :
+    span.second
+    | {{time.second}}
+  .date
+    .weekday
+    | {{date.weekday}},
+    .date
+    | {{date.day}}. {{date.month}} {{date.year}}
