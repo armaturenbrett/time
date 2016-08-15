@@ -1,4 +1,4 @@
-.time
+.time data={ months: t('time.months'), weekdays: t('time.weekdays') }
   .time
     = fa_icon('clock-o')
     span.hour
@@ -11,12 +11,7 @@
     = fa_icon('calendar')
     div
       span.weekday
-        | {{date.weekday}}
+        | {{date.weekday}},
       br
       span.date
-        span.day
-          | {{date.day}}
-        span.month
-          | {{date.month}}
-        span.year
-          | {{date.year}}
+        = t('time.formats.date')

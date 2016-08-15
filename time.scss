@@ -40,22 +40,6 @@
 
       .weekday {
         font-size: 125%;
-
-        &::after {
-          content: ',';
-        }
-      }
-
-      .day {
-        &::after{
-          content: '. ';
-        }
-      }
-
-      .month {
-        &::after{
-          content: ' ';
-        }
       }
     }
   }

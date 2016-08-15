@@ -19,6 +19,9 @@ class TimeWidget
     this.$widget = $('.widget > .time')
     this.template = this.$widget.html()
 
+    this.months = this.$widget.data('months')
+    this.weekdays = this.$widget.data('weekdays')
+
     this.currentDate = new Date()
     this.referenceDate = this.currentDate
 
@@ -43,9 +46,6 @@ class TimeWidget
     this.currentDate = new Date(this.currentDate.getTime() + increment)
     this.referenceDate = new Date(this.referenceDate.getTime() + 1000)
 
-    months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
-    weekdays = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag']
-
     this.renderData({
       'time': {
         'hour': this.zeroPad(this.currentDate.getHours()),
@@ -53,9 +53,9 @@ class TimeWidget
         'second': this.zeroPad(this.currentDate.getSeconds())
       },
       'date': {
-        'weekday': weekdays[this.currentDate.getDay()],
+        'weekday': this.weekdays[this.currentDate.getDay()],
         'day': this.zeroPad(this.currentDate.getDate()),
-        'month': months[this.currentDate.getMonth()],
+        'month': this.months[this.currentDate.getMonth()],
         'year': this.zeroPad(this.currentDate.getFullYear())
       }
     })
