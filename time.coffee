@@ -1,12 +1,12 @@
 App.widget_data = App.cable.subscriptions.create channel: 'WidgetDataChannel', widget: 'time',
   connected: ->
-    console.log('connected')
+    console.log('time connected')
 
   disconnected: ->
-    console.log('disconnected')
+    console.log('time disconnected')
 
   received: (data) ->
-    console.log('received data:', data)
+    console.log('time received data:', data)
     window.timeWidget.referenceDate = new Date(data)
 
 class TimeWidget
