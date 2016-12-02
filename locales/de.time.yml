@@ -1,7 +1,7 @@
 de:
   time:
     formats:
-      date: '{{date.day}}.{{date.month}}.{{date.year}}'
+      date: '{{date.day}}. {{date.month}} {{date.year}}'
     months:
       - 'Januar'
       - 'Februar'
