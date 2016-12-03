@@ -1,11 +1,33 @@
 .time {
-  .time {
-    font-size: 150%;
+  text-align: center;
+
+  .icon {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 15%;
+  }
+
+  .content {
+    display: inline-block;
+    padding-left: 1vw;
+    text-align: left;
+    vertical-align: top;
+    width: calc(65% - 1vw);
+  }
+
+  .time-row {
+    font-size: 130%;
+    line-height: 150%;
     margin: 0 0 1rem 0;
+
+    .icon {
+      line-height: 150%;
+    }
 
     .hour,
     .minute {
-      font-size: 125%;
+      font-size: 150%;
       font-weight: bold;
     }
 
@@ -20,21 +42,15 @@
         content: ':';
       }
     }
-
-    .fa {
-      margin: 0 .5rem 0 0;
-    }
   }
 
-  .date {
-    .fa {
+  .date-row {
+    .icon {
       font-size: 125%;
       line-height: 225%;
-      margin: 0 1rem 0 0;
-      vertical-align: top
     }
 
-    > div {
+    .content {
       display: inline-block;
       text-align: left;
 

@@ -1,15 +1,18 @@
 .time data={ months: t('time.months'), weekdays: t('time.weekdays') }
-  .time
-    = fa_icon('clock-o')
-    span.hour
-      | {{time.hour}}
-    span.minute
-      | {{time.minute}}
-    span.second
-    | {{time.second}}
-  .date
-    = fa_icon('calendar')
-    div
+  .time-row
+    .icon
+      = fa_icon('clock-o')
+    .content
+      span.hour
+        | {{time.hour}}
+      span.minute
+        | {{time.minute}}
+      span.second
+      | {{time.second}}
+  .date-row
+    .icon
+      = fa_icon('calendar')
+    .content
       span.weekday
         | {{date.weekday}},
       br
